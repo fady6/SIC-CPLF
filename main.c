@@ -28,12 +28,17 @@ int bookID = 2020001;
 void viewLibrary();
 // End View Books Function
 
+// Start Search in Library
+void bookSearch();
+// End Search in Library
+
 // Start Exit Function
 void feedback();
 // Start Exit Function
 
 int main()
 {
+
 printf("Welcome in Fady & Elrawy Program\n");
 printf("---------------------------------\n");
 int userChoice;
@@ -72,14 +77,13 @@ do
     break;
 
     case 5:
-    //library_Search()
+        bookSearch();
     break;
 
     default:
         printf("Please Enter a Valid Number (0-5)\n\n\n\n\n");
     }
 }while (userChoice !=0 );
-
 
 return 0;
 }
@@ -169,5 +173,24 @@ void feedback(){
     scanf("%s", userFeedback);
     printf("\nYour Rating is: %d\nYour Feedback: %s\n\n", userRate, userFeedback);
     printf("Thanks for your time\n\n\n\n");
+
+}
+
+
+// Search in Library
+void bookSearch(){
+    printf("Number of Books is: %d\n", book_No+1);
+    char userFindBook[50];
+    printf("Enter the Book's Name to search in our library: ");
+    scanf("%s", userFindBook);
+    printf("Your Book Target is: %s\n", userFindBook);
+    int i, flag = 0;
+    for (i=0; i<=book_No; i++)
+        if(strcmp(userFindBook, b[i].bookName) == 0)
+            flag = 1;
+    if (flag == 1)
+        printf("\nWoOoOo! ... This Book is in the Library\n\n\n\n");
+    else
+        printf("\nWe're so sorry ... This Book is not in the Library\n\n\n\n");
 
 }
