@@ -38,7 +38,6 @@ void feedback();
 
 int main()
 {
-
 printf("Welcome in Fady & Elrawy Program\n");
 printf("---------------------------------\n");
 int userChoice;
@@ -95,12 +94,14 @@ void menu()
 {
     printf("\n\n\nChoose From the Menu:\n");
     printf("---------------------\n");
+    printf("\033[1;31m");
     printf("(1) Student Register\n");
     printf("(2) Student Names\n");
     printf("(3) Add a New Book\n");
     printf("(4) List of Books\n");
     printf("(5) Search in Library\n");
     printf("(0) Exit From Program\n");
+    printf("\033[0m");
     printf("\n");
 }
 
@@ -154,7 +155,7 @@ void viewLibrary(){
     printf("------------------------\n");
     if (book_No<0) {printf("There is no books in the library.\n\n\n\n");}
     for (i=0; i<=book_No; i++){
-        printf("The Book No (%d) is:\t%s\n", i+1, b[i].bookName);
+        printf("The Book No (%d) is:\t%s\t ID: %d\n", i+1, b[i].bookName, b[i].bookID);
     }
 }
 
