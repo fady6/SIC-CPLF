@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 void menu();            // Menu Function Deceleration
 
@@ -94,14 +95,12 @@ void menu()
 {
     printf("\n\n\nChoose From the Menu:\n");
     printf("---------------------\n");
-    printf("\033[1;31m");
     printf("(1) Student Register\n");
     printf("(2) Student Names\n");
     printf("(3) Add a New Book\n");
     printf("(4) List of Books\n");
     printf("(5) Search in Library\n");
     printf("(0) Exit From Program\n");
-    printf("\033[0m");
     printf("\n");
 }
 
@@ -112,11 +111,11 @@ printf("\n\n\n\nRegistration Form:\n");
 printf("------------------\n");
 // storing information
     s[st_No].roll = st_No + 1;         printf("\nFor Student NO (%d): \n", s[st_No].roll);
-    printf("First Name:\t");           scanf("%s", s[st_No].firstName);
+    printf("First Name:\t");           scanf("%c", s[st_No].firstName);
     printf("Enter ID:\t");             scanf("%d", &s[st_No].id);
-    printf("Enter Faculty:\t");        scanf("%s", s[st_No].faculty);
-    printf("Enter Email:\t");          scanf("%s", s[st_No].email);
-    printf("Enter Password:\t");       scanf("%s", s[st_No].password);
+    printf("Enter Faculty:\t");        scanf("%c", s[st_No].faculty);
+    printf("Enter Email:\t");          scanf("%c", s[st_No].email);
+    printf("Enter Password:\t");       scanf("%c", s[st_No].password);
 // displaying information
 printf("\n\n\n\nDisplaying Information:\n");
 printf("---------------------------\n");
@@ -142,7 +141,7 @@ printf("\n\n\n\nAdding Books Form:\n");
 printf("-------------------------\n");
 // storing information
     b[book_No].bookNo = book_No + 1;   printf("\nBook Number (%d): \n", b[book_No].bookNo);
-    printf("Book Name: ");             scanf("%s", b[book_No].bookName);
+    printf("Book Name: ");             scanf("%c", b[book_No].bookName);
     b[book_No].bookID = bookID;
     printf("The Given Book ID is: %d\n\n\n", b[book_No].bookID);
 }
