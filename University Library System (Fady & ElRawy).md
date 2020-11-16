@@ -28,3 +28,6 @@ new registration, with a simplified searching for finding the user aim.
 with the arrays and the algorithms for finding.
 - The GUI problem is more complicated because of two reasons they are the time isn’t enough and
 communicate the data programme with display of information.
+
+## References: 
+https://overiq.com/c-programming-101/the-strcmp-function-in-c/
